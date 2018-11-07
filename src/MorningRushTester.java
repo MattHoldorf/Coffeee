@@ -1,3 +1,4 @@
+import java.awt.Button;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -16,6 +17,9 @@ public class MorningRushTester
 
     public static void main(String[] args)
     {
+        
+        
+        final int initialGulps = 5;
         class DrinkCoffee implements ActionListener
         {
             private int gulps;
@@ -29,12 +33,15 @@ public class MorningRushTester
                 if (gulps >= 0)
                 {
                     System.out.println(gulps);
-                    gulps--;
+                    
                 }
                 else if (gulps == 0)
                 {
                     System.out.println("Go to school");
+                    JOptionPane.showMessageDialog(null, "Make another?");
+                    gulps = initialGulps;
                 }
+                gulps--;
             }
         }
         
