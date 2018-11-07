@@ -47,7 +47,7 @@ public class MorningRushTester
                     JOptionPane.showMessageDialog(null, "Make another?");
                     gulps = initialGulps;
                 }
-                gulps++;
+                gulps--;
             }
         }
         
